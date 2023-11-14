@@ -16,10 +16,10 @@ reversals.
  * Output:
    * a position where the unsorted part starts at e.g. `5`
 
-**Hint**: 
-Compare successively values of the permutation with an increasing number starting at zero (`0`, `1`, `2` ...) 
-and ending at length of the permutation - 1. The comparison ends when the value in permutation is not the same as 
-the tested value or when the tested value is equal to the length of the permutation - 1.
+> **Hint**: 
+> Compare successively values of the permutation with an increasing number starting at zero (`0`, `1`, `2` ...) 
+> and ending at length of the permutation - 1. The comparison ends when the value in permutation is not the same as 
+> the tested value or when the tested value is equal to the length of the permutation - 1.
 
 ### Task 2
  * In R, create a function `IndicateAscending()` to mark ascending and descending parts of the permutation.
@@ -30,11 +30,11 @@ the tested value or when the tested value is equal to the length of the permutat
  * Output:
    * a vector of zeros and ones, where ascending parts are marked by `1` and descending by `0` e.g. `1 1 1 0 0 0 1 1 1`
 
-**Hint:**
-Create an indication vector of the same length as the permutation containing only `0` values, and then set the first
-and last values to `1`. The ascending parts of the permutation vector will be marked with `1` values in the indication
-vector. Create a loop that iterates through the permutation and if two values next to each other are ascending, 
-i.e. the second is the first + 1, then the indication vector is set to `1` at the given indexes.
+> **Hint:**
+> Create an indication vector of the same length as the permutation containing only `0` values, and then set the first
+> and last values to `1`. The ascending parts of the permutation vector will be marked with `1` values in the indication
+> vector. Create a loop that iterates through the permutation and if two values next to each other are ascending, 
+> i.e. the second is the first + 1, then the indication vector is set to `1` at the given indexes.
 
 
 ### Task 3
@@ -46,14 +46,14 @@ i.e. the second is the first + 1, then the indication vector is set to `1` at th
  * Output:
    * sorted permutation of integers e.g. `1 2 3 4 5 6 7 8 9`
 
-**Hint:** Add marginal values to the permutation and the following steps are repeated in the loop:
- * find the start of the unsorted region,
- * mark ascending/descending parts,
- * find the smallest value that is marked as descending part,
- * reversal between the start of the unsorted region and the smallest value marked as descending part.
-
-The loop ends when the permutation is sorted. Watch out for collision situations i.e. no parts marked as descending 
-or there is a single value marked as descending in front of the sorted part of the permutation.
+> **Hint:** Add marginal values to the permutation and the following steps are repeated in a loop:
+>  * find the start of the unsorted region,
+>  * mark ascending/descending parts,
+>  * find the smallest value that is marked as descending part,
+>  * reversal between the start of the unsorted region and the smallest value marked as descending part.
+>
+> The loop ends when the permutation is sorted. Watch out for collision situations i.e. no parts marked as descending 
+> or there is a single value marked as descending in front of the sorted part of the permutation.
 
 
 <details>
