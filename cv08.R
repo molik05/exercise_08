@@ -29,7 +29,6 @@ BreakPointSort <- function(permutation){
   #nastaveni zakladu
   l <- length(permutation)
   permutation <- c(0,permutation,(l+1))
-  minimum <- max(permutation)
   l <- length(permutation)
   
   #cyklus ktery opakuju nez neco
@@ -37,6 +36,7 @@ BreakPointSort <- function(permutation){
   while ((FindSorted(permutation)+1) != l){ 
     sorted <- FindSorted(permutation)
     vector <- IndicateAscending(permutation)
+    minimum <- max(permutation)
     for (k in 1:l){
       if (vector[k] == 0){
         if (permutation[k] < minimum){
@@ -48,7 +48,6 @@ BreakPointSort <- function(permutation){
     reversed_reg <- rev(permutation[(sorted+1):minid])
     rest_reg <- permutation[(minid+1):l]
     permutation <- c(sorted_reg,reversed_reg,rest_reg)
-    print(permutation)
   }
   return(permutation)
 }
